@@ -2,7 +2,7 @@
 
 namespace fezapi\client;
 
-require_once('../../public/include/class.api.php');
+require_once(__DIR__ . '/../../../public/include/class.api.php');
 
 /**
  * A class used to represent fez records on the client-side.
