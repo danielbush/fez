@@ -27,7 +27,7 @@ class ClientLibContext extends BehatContext
     public function workflowloadsmetadata($filename)
     {
         $xml = file_get_contents($this->fixturePath . '/' . $filename);
-        $d = client\get_actions($xml);
+        $d = client\getActions($xml);
     }
 
     /**
@@ -36,6 +36,6 @@ class ClientLibContext extends BehatContext
     public function workflowloadscollection($filename)
     {
         $xml = file_get_contents($this->fixturePath . '/' . $filename);
-        $d = client\get_actions($xml);
+        $d = client\getActions($xml);
     }
 }

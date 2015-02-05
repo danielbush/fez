@@ -238,7 +238,7 @@ class FeatureContext extends BehatContext
             } else {
                 $this->response_sxml = @new SimpleXMLExtended($this->response->raw_body);
             }
-            $this->actions = c\get_actions($this->response_raw);
+            $this->actions = c\getActions($this->response_raw);
         } catch (Exception $e) {
             $this->response_sxml    = NULL;
             if ($this->VERBOSE) {
@@ -1236,7 +1236,7 @@ class FeatureContext extends BehatContext
         $required = $this->_populateRequiredFields($this->record);
         $xml = $this->record->toXml();
 
-        $actions = c\by_key('name', $this->actions);
+        $actions = c\byKey('name', $this->actions);
         $publish = $actions['Publish'];
 
         $uri = $this->url . $publish['uri'];

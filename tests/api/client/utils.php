@@ -8,7 +8,7 @@ namespace fezapi\client;
 // 
 // array['params'] = parameters in the query string
 
-function decompose_uri(&$uri)
+function decomposeUri(&$uri)
 {
     $parts = \parse_url($uri);
     $parts['params'] = array();
@@ -21,24 +21,41 @@ function decompose_uri(&$uri)
 //
 // Useful for crawling the api.
 
-function get_actions($xml)
+function getActions($xml)
 {
     $sxml = new \SimpleXmlElement($xml);
     $result = array();
-    $actions = $sxml->xpath('//' . 'action'); // array
-    $by_name = array();
-    foreach ($actions as $action) {
-        $action = (array)$action;
-        $a = array();
-        foreach ($action as $k => $v) {
-            $v = (string)$v;
-            $a[$k] = $v;
-            if ($k == 'uri') {
-                $parts = decompose_uri($v);
-                $a['uri_parts'] = $parts;
-            }
+
+    // Look for <action> tags...
+    $actions = $sxml->xpath('//action'); // array
+    if ($actions) {
+        foreach ($actions as $action) {
+            $a = array();
+            $name = (string)$action->name;
+            $uri = (string)$action->uri;
+            if (!$uri) continue;
+            $a['name'] = $name;
+            $a['uri'] = $uri;
+            $parts = decomposeUri($uri);
+            $a['uri_parts'] = $parts;
+            $result[] = $a;
         }
-        $result[] = $a;
+    }
+
+    // Look for <workflow> tags...
+    $workflows = $sxml->xpath('//workflow'); // array
+    if ($workflows) {
+        foreach ($workflows as $workflow) {
+            $a = array();
+            $name = (string)$workflow->w_title;
+            $uri = (string)$workflow->w_url;
+            if (!$uri) continue;
+            $parts = decomposeUri($uri);
+            $a['name'] = trim($name);
+            $a['uri'] = trim($uri);
+            $a['uri_parts'] = $parts;
+            $result[] = $a;
+        }
     }
     return $result;
 }
@@ -48,7 +65,7 @@ function get_actions($xml)
 //
 // This is checked: isset($arr[n][$key])
 
-function by_key($key, &$arr) {
+function byKey($key, &$arr) {
     $result = array();
     foreach ($arr as $i) {
         if(isset($i[$key])) {
