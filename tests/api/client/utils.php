@@ -147,7 +147,10 @@ class Client
 //
 // @return array Associative array of the parts, see parse_url (php).
 // 
-// array['params'] = parameters in the query string
+// In the return array:
+// array['path']  => "..." is uri without the host/domain
+// array['query']  => "..." is the query string
+// array['params'] => array(...) are key/values in query string
 
 function decomposeUri(&$uri)
 {
@@ -157,10 +160,26 @@ function decomposeUri(&$uri)
     return $parts;
 }
 
-// Look for action-tag in workflow and similar xml output and convert
-// to array format.
-//
-// Useful for crawling the api.
+/**
+ * Look for action-tag and workflow-tags and extract their uris and labels.
+ *
+ * This will search on any xml output.
+ *
+ * @param string $xml A valid xml string.
+ * @return array An array of arrays.
+ * 
+ * array (
+ *   [0] => array (
+ *      [name] => ...
+ *      [uri] => /foo/bar/?...
+ *      [uri_parts] => <format of decomposeUri>
+ *   )
+ *   ...
+ * )
+ *
+ * The fez api exposes these uri's as "next steps" for actions in the api.
+ * Useful for crawling the api.
+ */
 
 function getActions($xml)
 {
