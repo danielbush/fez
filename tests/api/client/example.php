@@ -4,7 +4,7 @@
 // run at the beginning?
 
 require_once(__DIR__ . '/Record.php');
-require_once(__DIR__ . '/Workflow.php');
+require_once(__DIR__ . '/utils.php');
 
 $collection_xml = file_get_contents(__DIR__ . '/../fixtures/collection-example-01.xml');
 $metadata_xml = file_get_contents(__DIR__ . '/../fixtures/enter_metadata-example-01.xml');

@@ -3,7 +3,7 @@
 // Library used to make requests and parse xml etc
 require_once(__DIR__ . '/../../client/Client.php');
 require_once(__DIR__ . '/../../client/Record.php');
-require_once(__DIR__ . '/../../client/Workflow.php');
+require_once(__DIR__ . '/../../client/utils.php');
 require_once(__DIR__ . '/../../Expectation.php');
 require_once(__DIR__ . '/../../setuplib.php');
 
