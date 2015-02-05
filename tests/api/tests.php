@@ -16,7 +16,7 @@ use fezapi\client as c;
 //
 // Change 'www-data' to be the user that runs your fez application.
 
-require_once(__DIR__ . '/client/Client.php');
+require_once(__DIR__ . '/client/utils.php');
 require_once(__DIR__ . '/../../public/include/class.api.php' );
 
 $inifilepath = __DIR__ . '/conf.ini';
