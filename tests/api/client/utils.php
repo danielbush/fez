@@ -220,8 +220,19 @@ function getActions($xml)
     return $result;
 }
 
-// Converted indexed array of assoc arrays to associative array using
-// value of $key of each assoc array.
+/**
+ * Same as getActions but groups by the 'name' attribute of each
+ * returned action.
+ * 
+ */
+
+function getActionsByName($xml) {
+    $arr = getActions($xml);
+    return byKey('name', $arr);
+}
+
+// Converted indexed array of assoc arrays into associative array
+// keyed by one of the keys in the assoc arrays.
 //
 // This is checked: isset($arr[n][$key])
 
