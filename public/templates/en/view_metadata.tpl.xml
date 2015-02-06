@@ -21,7 +21,7 @@
                         {/if}
                     </xsdmf_title>
                     {if $xsd_display_fields[i].xsdmf_data_type == 'date'}
-                            <xsdmf_value>
+                            <xsdmf_value>{strip}
                                 {if $xsd_display_fields[i].xsdmf_html_input == 'date'}
                                     {$details[$temp_fld_id]}
                                 {else}
@@ -31,13 +31,9 @@
                                         {$details[$temp_fld_id]}
                                     {/if}
                                 {/if}
-                            </xsdmf_value>
+                            {/strip}</xsdmf_value>
                     {else}
-                            <xsdmf_value>
-                                <![CDATA[
-                                    {$details[$temp_fld_id] nofilter}
-                                ]]>
-                            </xsdmf_value>
+                            <xsdmf_value>{strip}<![CDATA[{$details[$temp_fld_id] nofilter}]]>{/strip}</xsdmf_value>
                     {/if}
                 </xsd_display_field>
             {/if}

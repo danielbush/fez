@@ -33,7 +33,7 @@
                     <xsdmf_title>{$field.xsdmf_title}</xsdmf_title>
                     <xsdmf_invsible>{$field.xsdmf_invisible}</xsdmf_invsible>
                     <xsdmf_required>{$field.xsdmf_required}</xsdmf_required>
-                    <xsdmf_html_input>
+                    <xsdmf_html_input>{strip}
                         {* For dates we need to specify the type of date eg. year (date_type = 0) or a full date 01/01/2014 (date_type = 1) *}
                         {if $field.xsdmf_html_input == 'date'}
                             {if ($field.xsdmf_date_type == 0) or ($field.xsdmf_date_type == '')}
@@ -44,18 +44,18 @@
                         {else}
                             {$field.xsdmf_html_input}
                         {/if}
-                    </xsdmf_html_input>
+                    {/strip}</xsdmf_html_input>
                     <xsdmf_enabled>{$field.xsdmf_enabled}</xsdmf_enabled>
                     <field_options>
                         {if ($field.xsdmf_html_input == 'contvocab_selector')}
-                            <uri>
+                            <uri>{strip}
                                 <![CDATA[{$rel_url}cv_selector.php?parent_id={$field.xsdmf_cvo_id}&form=wfl_form1&element=xsd_display_fields_{$field.xsdmf_id}_0&xsdmf_cvo_min_level={$field.xsdmf_cvo_min_level}]]>
-                            </uri>
+                            {/strip}</uri>
                         {/if}
                         {if ($field.xsdmf_html_input == 'file_input' && $field.xsdmf_title == 'File Upload')}
-                            <uri>
+                            <uri>{strip}
                                 <![CDATA[{$rel_url}uploader_upload_files.php?format=xml&workflowId={$id}&xsdmf_id={$field.xsdmf_id}&fileNumber=0]]>
-                            </uri>
+                            {/strip}</uri>
                         {/if}
                         {foreach from=$field.field_options item=option key=value}
                             {if ($option != '')}
@@ -175,16 +175,12 @@
 
             {if ( ($datastreams[d].isEditor == 1) || $isAdministrator )}
                 <delete_uri>
-                    <![CDATA[
-                        {$rel_url}popup.php?cat=delete_datastream&pid={$pid}&dsID={$datastreams[d].ID}
-                    ]]>
+                    <![CDATA[{$rel_url}popup.php?cat=delete_datastream&pid={$pid}&dsID={$datastreams[d].ID}]]>
                 </delete_uri>
             {/if}
             {if ($isSuperAdministrator)}
                 <purge_uri>
-                    <![CDATA[
-                        {$rel_url}popup.php?cat=purge_datastream&pid={$pid}&dsID={$datastreams[d].ID}
-                    ]]>
+                    <![CDATA[{$rel_url}popup.php?cat=purge_datastream&pid={$pid}&dsID={$datastreams[d].ID}]]>
                 </purge_uri>
             {/if}
             <permission>
@@ -206,9 +202,7 @@
             {section name="w" loop=$datastreams[d].workflows}
                 {if $datastreams[d].isEditor == 1 || $isAdministrator}
                     <edit_permission_uri>
-                        <![CDATA[
-                            {$rel_url}workflow/update.php?pid={$pid}&dsID={$datastreams[d].ID}&cat=select_workflow&wft_id={$datastreams[d].workflows[w].wft_id}&href={$smarty.server.REQUEST_URI}
-                        ]]>
+                        <![CDATA[{$rel_url}workflow/update.php?pid={$pid}&dsID={$datastreams[d].ID}&cat=select_workflow&wft_id={$datastreams[d].workflows[w].wft_id}&href={$smarty.server.REQUEST_URI}]]>
                     </edit_permission_uri>
                 {/if}
             {/section}
@@ -218,7 +212,5 @@
 </datastreams>
 
 <internal_notes>
-    <![CDATA[
-        {$internal_notes}
-    ]]>
+    <![CDATA[{$internal_notes}]]>
 </internal_notes>
