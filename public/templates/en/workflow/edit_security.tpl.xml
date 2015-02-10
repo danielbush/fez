@@ -104,6 +104,32 @@
                     <xsdmf_long_description><![CDATA[{$field.xsdmf_long_description}]]></xsdmf_long_description>
                     <xsdmf_multiple>{$field.xsdmf_multiple}</xsdmf_multiple>
                     <xsdmf_cso_value>{$field.xsdmf_cso_value}</xsdmf_cso_value>{*checkbox value*}
+                    {if is_array($details[$temp_fld_id])}
+                        {if ($field.xsdmf_html_input == 'contvocab_selector')}
+                        {foreach from=$details[$temp_fld_id] key=cvo_id item=name }
+                        <xsdmf_value><![CDATA[{$cvo_id}]]></xsdmf_value>
+                        {/foreach}
+                        {else}
+                        {section loop=$details[$temp_fld_id] name=i}
+                        <xsdmf_value><![CDATA[{$details[$temp_fld_id][i]}]]></xsdmf_value>
+                        {sectionelse}
+                        <xsdmf_value></xsdmf_value>
+                        {/section}
+                        {/if}
+                    {else}
+                        {if $field.xsdmf_html_input == 'date'}
+                            {* We have detected a specific date format, so present this in xml (for APP_API). *}
+                            {if $field.xsdmf_html_input_date_format == 'YYY-MM-DD'}
+                                <xsdmf_value>{$details[$temp_fld_id]|smarty:nodefaults}</xsdmf_value>
+                            {elseif $field.xsdmf_html_input_date_format == 'YYY'}
+                                <xsdmf_value>{$details[$temp_fld_id]|smarty:nodefaults}</xsdmf_value>
+                            {else}
+                                <xsdmf_value>{$details[$temp_fld_id]|smarty:nodefaults}</xsdmf_value>
+                            {/if}
+                        {else}
+                            <xsdmf_value>{$details[$temp_fld_id]}</xsdmf_value>
+                        {/if}
+                    {/if}
                     <xsdmf_static_text>{$field.xsdmf_static_text}</xsdmf_static_text>
                     <multiple_array_input>
                         {if $field.xsdmf_multiple == 1}
