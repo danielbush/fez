@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlfeed>
+  <actions>
+    <action>
+      <uri><![CDATA[/workflow/new.php?collection_pid=cdu:38515&xdis_id=174&xdis_id_top=174&wft_id=346]]></uri>
+      <name>Create Book</name>
+      <xdis_id>174</xdis_id>
+    </action>
+    <action>
+      <uri><![CDATA[/workflow/new.php?collection_pid=cdu:38515&xdis_id=177&xdis_id_top=177&wft_id=346]]></uri>
+      <name>Create Book Chapter</name>
+      <xdis_id>177</xdis_id>
+    </action>
+    <action>
+      <uri><![CDATA[/workflow/new.php?collection_pid=cdu:38515&xdis_id=130&xdis_id_top=130&wft_id=346]]></uri>
+      <name>Create Conference Paper</name>
+      <xdis_id>130</xdis_id>
+    </action>
+    <action>
+      <uri><![CDATA[/workflow/new.php?collection_pid=cdu:38515&xdis_id=179&xdis_id_top=179&wft_id=346]]></uri>
+      <name>Create Journal Article</name>
+      <xdis_id>179</xdis_id>
+    </action>
+    <action>
+      <uri><![CDATA[/workflow/new.php?collection_pid=cdu:38515&xdis_id=275&xdis_id_top=275&wft_id=346]]></uri>
+      <name>Create Research Report</name>
+      <xdis_id>275</xdis_id>
+    </action>
+  </actions>
+  <title>HERDC 2012 - CDU eSpace</title>
+  <link>http://cdu.danb/</link>
+  <description>Charles Darwin University</description>
+  <language>en</language>
+  <generator>Fez </generator>
+  <rows>2</rows>
+  <pager_row>0</pager_row>
+
+  <item>
+    <title>An example record 1</title>
+    <pid>cdu:38432</pid>
+    <citation><![CDATA[<a class="author_id_link" title="Browse by Author ID for Random Author1, Random Author2" href="/list/author_id/652/">Maple-Brown, Louise Janet</a>, <a title="Browse by Author Name for Random1, Author" href="/list/author/Random1%2C+Author/">Random1, Author</a>, <i>American Journal of Kidney Diseases</i>.]]></citation>
+    <identifier>http://cdu.danb/view/cdu:38432</identifier>
+    <description><![CDATA[]]></description>
+    <genre>Journal Article</genre>
+    <created_date>2014-01-17T02:04:25Z</created_date>
+    <updated_date>2014-02-03T15:30:18Z</updated_date>
+    <publication_date>2012-01-01T00:00:00Z</publication_date>
+    <formatted_title/>
+    <formatted_abstract><![CDATA[]]></formatted_abstract>
+    <issns>
+      <issn>0272-6386</issn>
+    </issns>
+    <journal_names>
+      <journal_name>American Journal of Kidney Diseases</journal_name>
+    </journal_names>
+    <volume_numbers>
+      <volume_number>60</volume_number>
+    </volume_numbers>
+    <issue_numbers>
+      <issue_number>4</issue_number>
+    </issue_numbers>
+    <end_pages>
+      <end_page>682</end_page>
+    </end_pages>
+    <start_pages>
+      <start_page>680</start_page>
+    </start_pages>
+    <place_of_publications>
+      <place_of_publication>United States</place_of_publication>
+    </place_of_publications>
+    <authors>
+      <author>Random2, Author</author>
+      <author>Random3, Author</author>
+    </authors>
+    <author_ids>
+      <author_id>652</author_id>
+      <author_id>0</author_id>
+    </author_ids>
+    <isMemberOfs>
+      <isMemberOf>cdu:30252</isMemberOf>
+      <isMemberOf>cdu:24101</isMemberOf>
+      <isMemberOf>cdu:38515</isMemberOf>
+    </isMemberOfs>
+    <keywords>
+      <keyword>Indigenous Australian</keyword>
+      <keyword>estimating equations</keyword>
+      <keyword>glomerular filtration rate</keyword>
+      <keyword>performance</keyword>
+    </keywords>
+    <publishers>
+      <publisher>Elsevier</publisher>
+    </publishers>
+    <subjects>
+      <subject>2790</subject>
+    </subjects>
+    <refereeds>
+      <refereed>1</refereed>
+    </refereeds>
+    <datastream_links>
+      <datastream_link><![CDATA[http://cdu.danb/eserv.php?pid=cdu:38432&dsID=Maple_Brown_38432.pdf]]></datastream_link>
+      <datastream_link><![CDATA[http://cdu.danb/eserv.php?pid=cdu:38432&dsID=presmd_Maple_Brown_38432.xml]]></datastream_link>
+    </datastream_links>
+    <datastreams>
+      <datastream>Maple_Brown_38432.pdf</datastream>
+      <datastream>presmd_Maple_Brown_38432.xml</datastream>
+    </datastreams>
+  </item>
+
+  <rows>2</rows>
+  <pager_row>0</pager_row>
+
+  <item>
+    <title>An example record 2</title>
+    <pid>cdu:38433</pid>
+    <citation><![CDATA[<a class="author_id_link" title="Browse by Author ID for Random Author1, Random Author2" href="/list/author_id/652/">Maple-Brown, Louise Janet</a>, <a title="Browse by Author Name for Random1, Author" href="/list/author/Random1%2C+Author/">Random1, Author</a>, <i>American Journal of Kidney Diseases</i>.]]></citation>
+    <identifier>http://cdu.danb/view/cdu:38433</identifier>
+    <description><![CDATA[]]></description>
+    <genre>Journal Article</genre>
+    <created_date>2014-01-17T02:04:25Z</created_date>
+    <updated_date>2014-02-03T15:30:18Z</updated_date>
+    <publication_date>2012-01-01T00:00:00Z</publication_date>
+    <formatted_title/>
+    <formatted_abstract><![CDATA[]]></formatted_abstract>
+    <issns>
+      <issn>0272-6386</issn>
+    </issns>
+    <journal_names>
+      <journal_name>American Journal of Kidney Diseases</journal_name>
+    </journal_names>
+    <volume_numbers>
+      <volume_number>60</volume_number>
+    </volume_numbers>
+    <issue_numbers>
+      <issue_number>4</issue_number>
+    </issue_numbers>
+    <end_pages>
+      <end_page>682</end_page>
+    </end_pages>
+    <start_pages>
+      <start_page>680</start_page>
+    </start_pages>
+    <place_of_publications>
+      <place_of_publication>United States</place_of_publication>
+    </place_of_publications>
+    <authors>
+      <author>Random2, Author</author>
+      <author>Random3, Author</author>
+    </authors>
+    <author_ids>
+      <author_id>652</author_id>
+      <author_id>0</author_id>
+    </author_ids>
+    <isMemberOfs>
+      <isMemberOf>cdu:30252</isMemberOf>
+      <isMemberOf>cdu:24101</isMemberOf>
+      <isMemberOf>cdu:38515</isMemberOf>
+    </isMemberOfs>
+    <keywords>
+      <keyword>Indigenous Australian</keyword>
+      <keyword>estimating equations</keyword>
+      <keyword>glomerular filtration rate</keyword>
+      <keyword>performance</keyword>
+    </keywords>
+    <publishers>
+      <publisher>Elsevier</publisher>
+    </publishers>
+    <subjects>
+      <subject>2790</subject>
+    </subjects>
+    <refereeds>
+      <refereed>1</refereed>
+    </refereeds>
+    <datastream_links>
+      <datastream_link><![CDATA[http://cdu.danb/eserv.php?pid=cdu:38433&dsID=Maple_Brown_38432.pdf]]></datastream_link>
+      <datastream_link><![CDATA[http://cdu.danb/eserv.php?pid=cdu:38433&dsID=presmd_Maple_Brown_38432.xml]]></datastream_link>
+    </datastream_links>
+    <datastreams>
+      <datastream>Maple_Brown_38432.pdf</datastream>
+      <datastream>presmd_Maple_Brown_38432.xml</datastream>
+    </datastreams>
+  </item>
+
+</xmlfeed>
